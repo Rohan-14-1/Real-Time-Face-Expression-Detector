@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1220;
+    color: #fff;
+}
+
+.app {
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header p {
+    color: #9ca3af;
+    margin: 5px 0 0;
+}
+
+.status-pill {
+    background: #111827;
+    padding: 8px 14px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.status-pill .dot {
+    width: 8px;
+    height: 8px;
+    background: #ef4444;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-pill.ready .dot {
+    background: #22c55e;
+}
+
+.main {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background: #0f172a;
+    padding: 16px;
+    border-radius: 12px;
+    flex: 1;
+}
+
+.right {
+    max-width: 350px;
+}
+
+.camera-wrapper {
+    position: relative;
+}
+
+video {
+    width: 480px;      /* decrease size */
+    height: 360px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+canvas {
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0,0,0,0.6);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.controls {
+    margin-top: 12px;
+}
+
+.btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.start {
+    background: #22c55e;
+    color: white;
+}
+
+.stop {
+    background: #1f2937;
+    color: white;
+}
+
+.tip {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.result-box {
+    background: #111827;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.bar {
+    width: 100%;
+    height: 8px;
+    background: #1f2937;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#confidenceBar {
+    height: 100%;
+    width: 0%;
+    background: #22c55e;
+}
+
+.log {
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 13px;
+}
+
+.log p {
+    margin: 4px 0;
+    color: #ef4444;
+}
