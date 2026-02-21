@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time Face Expression Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- Header -->
+    <div class="header">
+        <div>
+            <h1>Real-Time Face Expression Detector</h1>
+            <p>Camera → Backend model → Live emotion prediction</p>
+        </div>
+        <div class="status-pill" id="statusPill">
+            <span class="dot"></span>
+            <span id="statusText">Camera off</span>
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="main">
+
+        <!-- Left: Camera -->
+        <div class="card">
+            <div class="camera-wrapper">
+                <video id="camera" autoplay playsinline></video>
+                <canvas id="frameCanvas"></canvas>
+                <div class="overlay" id="overlayText">Camera off</div>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn" class="btn start">Start Camera</button>
+                <button id="stopBtn" class="btn stop">Stop</button>
+                <span class="tip">Tip: Allow camera access in your browser.</span>
+            </div>
+        </div>
+
+        <!-- Right: Prediction -->
+        <div class="card right">
+            <h3>Current Expression</h3>
+
+            <div class="result-box">
+                <h2 id="expressionLabel">N/A</h2>
+                <p id="expressionConfidence">Confidence: 0%</p>
+                <div class="bar">
+                    <div id="confidenceBar"></div>
+                </div>
+            </div>
+
+            <h4>Recent predictions</h4>
+            <div class="log" id="log"></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
